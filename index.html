@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chez Nous | Restaurant</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff8f0;
+            color: #222;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #111;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            margin: 0;
+            color: #ff7a00;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* GRANDE IMAGE */
+
+        .hero {
+            min-height: 500px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.55)
+                ),
+                url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        /* BOUTONS */
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 28px;
+
+            background: #ff7a00;
+            color: white;
+
+            text-decoration: none;
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #e56700;
+            transform: scale(1.05);
+        }
+
+        /* SECTIONS */
+
+        .section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        /* MENU */
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.1);
+
+            text-align: center;
+
+            overflow: hidden;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* IMAGES DES PLATS */
+
+        .food-image {
+            width: 100%;
+            height: 200px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #ff7a00;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            margin-top: 15px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #111;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #ff7a00;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #000;
+
+            color: #aaa;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+
+        /* TELEPHONE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .menu {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <h2>🍽️ Chez Nous</h2>
+
+        <div>
+
+            <a href="#menu">
+                Menu
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ACCUEIL -->
+
+    <section class="hero">
+
+        <div>
+
+            <h1>
+                Bienvenue chez Nous
+            </h1>
+
+            <p>
+                Découvrez des plats délicieux préparés avec passion.
+            </p>
+
+            <a
+                href="#menu"
+                class="button"
+            >
+                Voir le menu
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENU -->
+
+    <section
+        class="section"
+        id="menu"
+    >
+
+        <h2>
+            🍴 Notre Menu
+        </h2>
+
+
+        <div class="menu">
+
+
+            <!-- POULET -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=600&q=80"
+                    alt="Poulet braisé"
+                    class="food-image"
+                >
+
+                <h3>
+                    Poulet braisé
+                </h3>
+
+                <p>
+                    Poulet grillé accompagné
+                    de délicieux légumes.
+                </p>
+
+                <div class="price">
+                    5 000 FCFA
+                </div>
+
+            </div>
+
+
+            <!-- PIZZA -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80"
+                    alt="Pizza"
+                    class="food-image"
+                >
+
+                <h3>
+                    Pizza
+                </h3>
+
+                <p>
+                    Pizza préparée avec
+                    des ingrédients frais.
+                </p>
+
+                <div class="price">
+                    4 000 FCFA
+                </div>
+
+            </div>
+
+
+            <!-- RIZ -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80"
+                    alt="Riz"
+                    class="food-image"
+                >
+
+                <h3>
+                    Riz + sauce
+                </h3>
+
+                <p>
+                    Un plat savoureux
+                    et généreux.
+                </p>
+
+                <div class="price">
+                    2 500 FCFA
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section
+        class="contact"
+        id="contact"
+    >
+
+        <div class="section">
+
+            <h2>
+                📞 Contactez-nous
+            </h2>
+
+            <p>
+                Téléphone :
+                +235 61 83 93 47
+            </p>
+
+            <p>
+                📍 N'Djamena
+            </p>
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                class="button"
+                href="https://wa.me/23561839347?text=Bonjour%20!%20Je%20voudrais%20passer%20une%20commande."
+                target="_blank"
+            >
+                💬 Commander sur WhatsApp
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PIED DE PAGE -->
+
+    <footer>
+
+        © 2026 Chez Nous
+        — Tous droits réservés.
+
+    </footer>
+
+
+</body>
+</html>
